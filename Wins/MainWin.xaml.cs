@@ -83,7 +83,7 @@ public partial class MainWin : Window
             MihomoConfWatcher_Changed(null!, null!);
 
             if (!MainPres.IsNginxRunning)
-                NginxStoppedCleaner.Clean();
+                NginxCleaner.Clean();
 
             UpdateUpstreamHostButton_Click(null!, null!);
         });
@@ -304,7 +304,7 @@ public partial class MainWin : Window
                 await nginxProcess.WaitForExitAsync();
             }
 
-            NginxStoppedCleaner.Clean();
+            NginxCleaner.Clean();
         }
     }
     private void MihomoButton_Click(object sender, RoutedEventArgs e)
